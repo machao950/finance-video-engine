@@ -1,0 +1,22 @@
+{
+  "name": "finance-finance-components",
+  "version": "1.0.0",
+  "hyperframes": "0.8.27",
+  "components": [
+    "valuation-curve",
+    "earnings-expectation-gap",
+    "causal-flow",
+    "bull-bear-comparison",
+    "three-scenarios",
+    "action-checklist",
+    "caption-source"
+  ],
+  "sections": [
+    "01-opening",
+    "02-facts",
+    "03-mechanism",
+    "04-countercase",
+    "05-scenarios-action",
+    "06-closing"
+  ]
+}

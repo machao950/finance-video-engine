@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1920,height=1080" />
+  <script src="./node_modules/gsap/dist/gsap.min.js"></script>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#07131f}
+    #root{position:relative;width:1920px;height:1080px;overflow:hidden;background:#07131f}
+  </style>
+</head>
+<body>
+<main id="root" data-composition-id="finance-six-section" data-start="0" data-duration="48" data-width="1920" data-height="1080">
+  <!-- 01-opening -->
+  <div id="section-01-valuation" data-finance-section="01-opening" data-composition-id="valuation-curve" data-composition-src="components/valuation-curve.html" data-start="0" data-duration="8" data-track-index="1" data-width="1920" data-height="1080" data-variable-values='{"title":"01 结论与估值位置","subtitle":"将本期真实历史分位和当前值注入","source":"来源待注入"}'></div>
+  <!-- 02-facts -->
+  <div id="section-02-earnings-gap" data-finance-section="02-facts" data-composition-id="earnings-expectation-gap" data-composition-src="components/earnings-expectation-gap.html" data-start="8" data-duration="8" data-track-index="1" data-width="1920" data-height="1080" data-variable-values='{"title":"02 财报预期差","metric":"核心指标待注入","actual":"实际值待注入","expected":"预期值待注入","source":"来源待注入"}'></div>
+  <!-- 03-mechanism -->
+  <div id="section-03-causal-flow" data-finance-section="03-mechanism" data-composition-id="causal-flow" data-composition-src="components/causal-flow.html" data-start="16" data-duration="8" data-track-index="1" data-width="1920" data-height="1080" data-variable-values='{"title":"03 因果传导链","step1":"已确认事实","step2":"业务传导","step3":"盈利影响","step4":"估值反应","source":"已确认/推测边界待注入"}'></div>
+  <!-- 04-countercase -->
+  <div id="section-04-bull-bear" data-finance-section="04-countercase" data-composition-id="bull-bear-comparison" data-composition-src="components/bull-bear-comparison.html" data-start="24" data-duration="8" data-track-index="1" data-width="1920" data-height="1080" data-variable-values='{"title":"04 多空最强证据","bullTitle":"多头条件","bullBody":"待注入可核验证据","bearTitle":"空头条件","bearBody":"待注入反方证据","source":"来源待注入"}'></div>
+  <!-- 05-scenarios-action -->
+  <div id="section-05-scenarios" data-finance-section="05-scenarios-action" data-composition-id="three-scenarios" data-composition-src="components/three-scenarios.html" data-start="32" data-duration="4" data-track-index="1" data-width="1920" data-height="1080" data-variable-values='{"title":"05 三情景","base":"基准：触发条件待注入","up":"乐观：触发条件待注入","down":"风险：触发条件待注入"}'></div>
+  <div id="section-05-action" data-finance-section="05-scenarios-action" data-composition-id="action-checklist" data-composition-src="components/action-checklist.html" data-start="36" data-duration="4" data-track-index="1" data-width="1920" data-height="1080" data-variable-values='{"title":"05 行动清单","item1":"核对数据口径","item2":"观察触发指标","item3":"记录失效条件","item4":"控制风险暴露"}'></div>
+  <!-- 06-closing -->
+  <div id="section-06-caption-source" data-finance-section="06-closing" data-composition-id="caption-source" data-composition-src="components/caption-source.html" data-start="40" data-duration="8" data-track-index="3" data-width="1920" data-height="1080" data-variable-values='{"headline":"06 回答标题与失效条件","caption":"字幕从真实 timeline.json 的当前 cue 注入，最多 2 行。","source":"来源：待注入｜证据等级：待注入","declaration":"示意图/观点声明按实际内容注入"}'></div>
+</main>
+<script>
+  const root=document.querySelector('[data-composition-id="finance-six-section"]');
+  const timeline=gsap.timeline({paused:true});
+  timeline.to({}, {duration:48});
+  window.__timelines["finance-six-section"]=timeline;
+</script>
+</body>
+</html>

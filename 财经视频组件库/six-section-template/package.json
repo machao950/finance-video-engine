@@ -1,0 +1,21 @@
+{
+  "name": "finance-six-section-finance-video",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "npx --yes hyperframes@0.8.27 lint",
+    "check": "npx --yes hyperframes@0.8.27 check",
+    "check:variables": "if rg -n '待注入|示例数字|旧来源' index.html; then echo '发现未替换变量'; exit 1; fi",
+    "snapshot": "npx --yes hyperframes@0.8.27 snapshot --at 4,12,20,28,34,38,44 --output snapshots",
+    "preview": "npx --yes hyperframes@0.8.27 preview --background",
+    "render": "npx --yes hyperframes@0.8.27 render --quality high --output finance-finance.mp4",
+    "motion:plan": "node scripts/build-motion-plan.mjs",
+    "motion:check": "node scripts/check-motion-plan.mjs"
+  },
+  "dependencies": {
+    "@motion-canvas/2d": "3.17.2",
+    "@motion-canvas/core": "3.17.2",
+    "d3": "7.9.0",
+    "gsap": "3.14.2"
+  }
+}
